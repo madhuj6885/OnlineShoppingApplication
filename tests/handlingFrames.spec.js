@@ -43,3 +43,12 @@ test("Nested and multiple frames",async ({page}) =>{
 
 
 })
+test(" multiple frames",async ({page}) =>{
+
+    await page.goto("https://demoapps.qspiders.com/ui/frames/nested?sublist=1");
+    let parentFrame = await page.frameLocator("//iframe[@class='w-full h-96']");
+    let email = await parentFrame.locator("//input[@text()='Admin@gmail.com']").textContent();
+    let pass = await parentFrame.locator("//p[text()='Default Password']//following-sibling::p[1]").textContent();
+
+
+})

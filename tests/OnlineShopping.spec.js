@@ -6,7 +6,7 @@ import admincredentials from "../testData/AdminLoginCredentials.json";
 import insertProductDetails from "../testData/insertProduct.json";
 import creatCategoryData from "..//testData/createCategoryData.json";
 import editproduct from "../testData/editProduct.json";
-import userData from "../testData/userLoginData.json";
+// import userData from "../testData/userLoginData.json";
 
 admincredentials.forEach((obj, i) =>{
     test.only(`Multple login ${i}`, async({page}) =>{

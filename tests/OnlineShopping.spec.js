@@ -9,7 +9,7 @@ import editproduct from "../testData/editProduct.json";
 // import userData from "../testData/userLoginData.json";
 
 admincredentials.forEach((obj, i) =>{
-    test.only(`Multple login ${i}`, async({page}) =>{
+    test(`Multple login ${i}`, async({page}) =>{
         let h = new HomePage(page);
         let a = new AdminPage(page);
         let product = insertProductDetails;
